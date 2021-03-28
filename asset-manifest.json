@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/job-search-react-redux/static/css/main.4d653916.chunk.css",
-    "main.js": "/job-search-react-redux/static/js/main.9228a786.chunk.js",
-    "main.js.map": "/job-search-react-redux/static/js/main.9228a786.chunk.js.map",
+    "main.js": "/job-search-react-redux/static/js/main.72c92764.chunk.js",
+    "main.js.map": "/job-search-react-redux/static/js/main.72c92764.chunk.js.map",
     "runtime-main.js": "/job-search-react-redux/static/js/runtime-main.d3d8021c.js",
     "runtime-main.js.map": "/job-search-react-redux/static/js/runtime-main.d3d8021c.js.map",
-    "static/js/2.29fa2c58.chunk.js": "/job-search-react-redux/static/js/2.29fa2c58.chunk.js",
-    "static/js/2.29fa2c58.chunk.js.map": "/job-search-react-redux/static/js/2.29fa2c58.chunk.js.map",
+    "static/js/2.ff1ec1c0.chunk.js": "/job-search-react-redux/static/js/2.ff1ec1c0.chunk.js",
+    "static/js/2.ff1ec1c0.chunk.js.map": "/job-search-react-redux/static/js/2.ff1ec1c0.chunk.js.map",
     "static/js/3.f3290fbc.chunk.js": "/job-search-react-redux/static/js/3.f3290fbc.chunk.js",
     "static/js/3.f3290fbc.chunk.js.map": "/job-search-react-redux/static/js/3.f3290fbc.chunk.js.map",
     "index.html": "/job-search-react-redux/index.html",
     "static/css/main.4d653916.chunk.css.map": "/job-search-react-redux/static/css/main.4d653916.chunk.css.map",
-    "static/js/2.29fa2c58.chunk.js.LICENSE.txt": "/job-search-react-redux/static/js/2.29fa2c58.chunk.js.LICENSE.txt"
+    "static/js/2.ff1ec1c0.chunk.js.LICENSE.txt": "/job-search-react-redux/static/js/2.ff1ec1c0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d3d8021c.js",
-    "static/js/2.29fa2c58.chunk.js",
+    "static/js/2.ff1ec1c0.chunk.js",
     "static/css/main.4d653916.chunk.css",
-    "static/js/main.9228a786.chunk.js"
+    "static/js/main.72c92764.chunk.js"
   ]
 }
