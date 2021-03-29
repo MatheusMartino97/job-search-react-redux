@@ -38,7 +38,7 @@ class Register extends React.Component {
       const { searchProfessionList, getWorkerInfo } = this.props;
 
       const apiKey = 'ddd70c32-fc98-4618-b494-a9698f824353';
-      const endpoit = `https://lb-aws-1105894158.sa-east-1.elb.amazonaws.com/profissao/${stateShort}/${city}?api-key=${apiKey}`;
+      const endpoit = `http://lb-aws-1105894158.sa-east-1.elb.amazonaws.com/profissao/${stateShort}/${city}?api-key=${apiKey}`;
 
       const request = await fetch(endpoit);
       const professionList = await request.json();
