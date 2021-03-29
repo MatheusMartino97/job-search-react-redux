@@ -2,7 +2,7 @@
   "name": "search-profissions",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MatheusMartino97.github.io/job-search-react-redux",
+  "homepage": "http://MatheusMartino97.github.io/job-search-react-redux",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",

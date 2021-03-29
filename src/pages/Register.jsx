@@ -29,30 +29,34 @@ class Register extends React.Component {
   }
 
   async fetchProfessions(workerInfo) {
-    this.setState({
-      shouldRedirect: false
-    })
+    try {
+      this.setState({
+        shouldRedirect: false,
+      });
 
-    const { city, stateShort } = workerInfo;
-    const { searchProfessionList, getWorkerInfo } = this.props;
+      const { city, stateShort } = workerInfo;
+      const { searchProfessionList, getWorkerInfo } = this.props;
 
-    const apiKey = 'ddd70c32-fc98-4618-b494-a9698f824353';
-    const endpoit = `http://lb-aws-1105894158.sa-east-1.elb.amazonaws.com/profissao/${stateShort}/${city}?api-key=${apiKey}`;
+      const apiKey = 'ddd70c32-fc98-4618-b494-a9698f824353';
+      const endpoit = `https://lb-aws-1105894158.sa-east-1.elb.amazonaws.com/profissao/${stateShort}/${city}?api-key=${apiKey}`;
 
-    const request = await fetch(endpoit);
-    const professionList = await request.json();
+      const request = await fetch(endpoit);
+      const professionList = await request.json();
 
-    if (professionList.message) {
-      getWorkerInfo([])
-    } else {
-      getWorkerInfo(workerInfo);
+      if (professionList.message) {
+        getWorkerInfo([]);
+      } else {
+        getWorkerInfo(workerInfo);
+      }
+
+      searchProfessionList(professionList);
+
+      this.setState({
+        shouldRedirect: true,
+      });
+    } catch (error) {
+      alert(error)
     }
-    
-    searchProfessionList(professionList);
-
-    this.setState({
-      shouldRedirect: true
-    })
   }
   render() {
     return (
@@ -61,37 +65,37 @@ class Register extends React.Component {
         <form action="" onChange={this.handleChange}>
           <fieldset>
             <legend>Informações pessoais</legend>
-          <label htmlFor="city-input">
-            Cidade:
-            <br/>
-            <input type="text" name="city" id="city-input" />
-          </label>
-          <br />
-          <label htmlFor="states-input">
-            Estado:
-            <br/>
-            <select name="stateShort" id="states-input">
-              {states.map(({ value, name }) => {
-                return (
-                  <option key={value} value={value}>
-                    {name}
-                  </option>
-                );
-              })}
-            </select>
-          </label>
-          <br />
-          <label htmlFor="job-input">
-            Profissão:
-            <br/>
-            <input type="text" name="job" id="job-input" />
-          </label>
-          <br />
-          <label htmlFor="job-input">
-            Entidade:
-            <br/>
-            <input type="text" name="entity" id="entity-input" />
-          </label>
+            <label htmlFor="city-input">
+              Cidade:
+              <br />
+              <input type="text" name="city" id="city-input" />
+            </label>
+            <br />
+            <label htmlFor="states-input">
+              Estado:
+              <br />
+              <select name="stateShort" id="states-input">
+                {states.map(({ value, name }) => {
+                  return (
+                    <option key={value} value={value}>
+                      {name}
+                    </option>
+                  );
+                })}
+              </select>
+            </label>
+            <br />
+            <label htmlFor="job-input">
+              Profissão:
+              <br />
+              <input type="text" name="job" id="job-input" />
+            </label>
+            <br />
+            <label htmlFor="job-input">
+              Entidade:
+              <br />
+              <input type="text" name="entity" id="entity-input" />
+            </label>
           </fieldset>
 
           <br />
@@ -105,7 +109,9 @@ class Register extends React.Component {
           </button>
         </form>
         <footer>
-          <Link to="/" className="nav-link">Voltar para Home</Link>
+          <Link to="/" className="nav-link">
+            Voltar para Home
+          </Link>
         </footer>
         {this.state.shouldRedirect === true ? <Redirect to="/results" /> : null}
       </div>
