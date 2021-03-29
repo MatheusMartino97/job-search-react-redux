@@ -15,8 +15,9 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 90vh;
+  height: 100%;
   padding: 0 20px;
+  margin-bottom: 70px;
 }
 
 h1,
@@ -148,6 +149,7 @@ code {
   body {
     display: flex;
     justify-content: center;
+    background-image: url("https://image.freepik.com/free-photo/flat-lay-workplace-with-laptop-coffe-note-taking-hand-withe-desk-vertical-format-top-view_138656-571.jpg");
   }
 
   form {
