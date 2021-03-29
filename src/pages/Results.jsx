@@ -27,7 +27,7 @@ class Results extends React.Component {
     const { listEntities } = this.props;
 
     const apiKey = '4b94dba2-5524-4632-939b-92df1c50a645';
-    const endpoint = `http://lb-aws-1105894158.sa-east-1.elb.amazonaws.com/entidade/${selectedJob}/${stateShort}/${city}?api-key=${apiKey}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://lb-aws-1105894158.sa-east-1.elb.amazonaws.com/entidade/${selectedJob}/${stateShort}/${city}?api-key=${apiKey}`;
 
     const request = await fetch(endpoint);
     const entitiesList = await request.json();
