@@ -61,9 +61,15 @@ class Results extends React.Component {
         )}
 
         {workerInfo.city ? (
-          <em>
-            Clique um uma profissão para ver as entidades que oferecem os cargos
-          </em>
+          <div>
+            <em>
+              Esses são os cargos de emprego em sua região
+            </em>
+            <br/>
+            <em>
+              Clique um uma profissão para ver as entidades que oferecem vagas de emprego
+            </em>
+          </div>
         ) : null}
 
         <ProfessionsList
@@ -72,7 +78,9 @@ class Results extends React.Component {
           handleClick={this.handleClick}
         />
         <footer>
-          <Link to="/register" className="nav-link">Registro</Link>
+          <Link to="/register" className="nav-link">
+            Registro
+          </Link>
         </footer>
 
         {this.state.shoulRedirect ? (

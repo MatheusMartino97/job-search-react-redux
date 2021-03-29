@@ -9,6 +9,7 @@ class Entities extends React.Component {
     return (
       <div>
         <h1>Entidades</h1>
+        <em>Clique em alguma entidade para mais informações</em>
         <div id="entities-container" onClick={this.searchEntity}>
           {entitiesList.map(({ NomeFantasia, RazaoSocial }) => {
             return (
