@@ -12,6 +12,7 @@ body {
   background-image: url('https://webassets.job.com/home_hero_v2.webp');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   overflow-x: hidden;
   overflow-y: scroll;
   height: 90vh;
